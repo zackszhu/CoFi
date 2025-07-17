@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - PORT=3000
+        - NODE_ENV=development
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.local
+    volumes:
+      # Mount source code for development (optional - remove for production)
+      - ".:/app"
+      - "/app/node_modules"
+      - "cofi_dev_data:/app/data"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=development
+      - HOST=0.0.0.0
+      - PORT=3000
+    # Development-specific settings
+    stdin_open: true
+    tty: true
+    command: ["pnpm", "dev"]
+
+volumes:
+  cofi_dev_data:
+    driver: local

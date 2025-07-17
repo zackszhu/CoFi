@@ -1,0 +1,11 @@
+description,category,amount,date,is_public
+Grocery shopping,Groceries,-125.50,2024-01-15,false
+Monthly salary,Misc,3500.00,2024-01-01,false
+Netflix subscription,Service Subscriptions,-15.99,2024-01-10,true
+Gas station,Gas,-45.30,2024-01-12,false
+Restaurant dinner,Dine In,-78.00,2024-01-14,true
+Online course,Software and Games,-199.99,2024-01-05,false
+Gym membership,Sports,-29.99,2024-01-01,true
+Coffee shop,Coffee,-12.45,2024-01-16,false
+Electric bill,Utilities,-89.50,2024-01-08,false
+Freelance project,Misc,850.00,2024-01-20,true
